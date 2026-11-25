@@ -1,0 +1,15 @@
+{
+  "name": "jobfinder",
+  "version": "1.0.0",
+  "description": "JobFinder – Job Portal (static frontend + serverless API). Works locally and on Vercel.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["job-portal", "vercel", "nodejs"],
+  "license": "MIT"
+}

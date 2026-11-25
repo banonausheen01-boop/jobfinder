@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobFinder - Find Your Dream Job</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Job<span>Finder</span></div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#featured-jobs">Jobs</a></li>
+                <li><a href="#categories">Companies</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <div class="nav-buttons" id="navButtons">
+                <a href="login.html" class="login">Login</a>
+                <a href="register.html" class="register">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="small-title">🚀 YOUR CAREER STARTS HERE</p>
+
+            <h1>
+                Find Your
+                <span>Dream Job</span>
+                Today
+            </h1>
+
+            <p class="description">
+                Discover thousands of job opportunities from top companies
+                and take the next step in your career.
+            </p>
+
+            <!-- Search Box -->
+            <div class="search-box">
+                <div class="search-input">
+                    🔍
+                    <input type="text" id="searchKeyword" placeholder="Job title, skills or keywords">
+                </div>
+
+                <div class="location-input">
+                    📍
+                    <input type="text" id="searchLocation" placeholder="Location">
+                </div>
+
+                <button type="button" id="searchBtn">Search Jobs</button>
+            </div>
+
+            <p class="popular">
+                Popular: Software Developer · Designer · Marketing · Data Analyst
+            </p>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+        <div class="section-heading">
+            <p>EXPLORE OPPORTUNITIES</p>
+            <h2>Popular Job Categories</h2>
+        </div>
+
+        <div class="category-container">
+            <div class="category-card" onclick="showJobs('it')">
+                <div class="icon">💻</div>
+                <h3>Information Technology</h3>
+                <p>1,250+ Jobs</p>
+            </div>
+
+            <div class="category-card" onclick="showJobs('finance')">
+                <div class="icon">📊</div>
+                <h3>Finance & Accounting</h3>
+                <p>850+ Jobs</p>
+            </div>
+
+            <div class="category-card" onclick="showJobs('design')">
+                <div class="icon">🎨</div>
+                <h3>Design & Creative</h3>
+                <p>620+ Jobs</p>
+            </div>
+
+            <div class="category-card" onclick="showJobs('marketing')">
+                <div class="icon">📢</div>
+                <h3>Marketing</h3>
+                <p>540+ Jobs</p>
+            </div>
+        </div>
+
+        <!-- Hidden Job Options -->
+        <div id="job-options" class="job-options">
+            <h2 id="category-title"></h2>
+            <div id="job-list" class="job-list"></div>
+        </div>
+    </section>
+
+    <!-- Featured Jobs -->
+    <section class="featured-jobs" id="featured-jobs">
+        <div class="section-heading">
+            <p>LATEST OPPORTUNITIES</p>
+            <h2>Featured Jobs</h2>
+        </div>
+
+        <p id="searchStatus" class="search-status" style="display:none;"></p>
+
+        <div class="job-container" id="featuredJobContainer">
+            <div class="job-card" data-title="Frontend Developer" data-company="Google" data-location="Bangalore, India">
+                <div class="company-logo">G</div>
+                <div class="job-info">
+                    <h3>Frontend Developer</h3>
+                    <p>Google</p>
+                    <span>📍 Bangalore, India</span>
+                </div>
+                <div class="job-actions">
+                    <div class="job-type">Full Time</div>
+                    <button type="button" class="apply-btn" onclick="applyJob(1, 'Frontend Developer', 'Google')">Apply Now</button>
+                </div>
+            </div>
+
+            <div class="job-card" data-title="UI/UX Designer" data-company="Microsoft" data-location="Hyderabad, India">
+                <div class="company-logo">M</div>
+                <div class="job-info">
+                    <h3>UI/UX Designer</h3>
+                    <p>Microsoft</p>
+                    <span>📍 Hyderabad, India</span>
+                </div>
+                <div class="job-actions">
+                    <div class="job-type">Full Time</div>
+                    <button type="button" class="apply-btn" onclick="applyJob(2, 'UI/UX Designer', 'Microsoft')">Apply Now</button>
+                </div>
+            </div>
+
+            <div class="job-card" data-title="Data Analyst" data-company="Amazon" data-location="Mumbai, India">
+                <div class="company-logo">A</div>
+                <div class="job-info">
+                    <h3>Data Analyst</h3>
+                    <p>Amazon</p>
+                    <span>📍 Mumbai, India</span>
+                </div>
+                <div class="job-actions">
+                    <div class="job-type">Full Time</div>
+                    <button type="button" class="apply-btn" onclick="applyJob(3, 'Data Analyst', 'Amazon')">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="cta">
+        <h2>Ready to Find Your Next Opportunity?</h2>
+        <p>Create your profile and start applying for jobs today.</p>
+        <a href="profile.html" class="cta-button">Create Your Profile</a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="footer-content">
+            <div>
+                <h2>JobFinder</h2>
+                <p>Connecting talented people with great opportunities.</p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <p>Jobs</p>
+                <p>Companies</p>
+                <p>About Us</p>
+            </div>
+
+            <div>
+                <h3>For Employers</h3>
+                <p>Post a Job</p>
+                <p>Find Candidates</p>
+                <p>Recruiter Login</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2026 JobFinder. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>
